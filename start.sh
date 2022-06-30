@@ -1,12 +1,4 @@
-if [ -z $UPSTREAM_REPO ]
-then
-  echo "Cloning main Repository"
-  git clone https://github.com/KyoukaUzen/LisaFilter.git /EvaMaria
-else
-  echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /Lisa-filter-Beta
-fi
-cd /EvaMaria
+echo "Installing Requirements..."
 pip3 install -U -r requirements.txt
-echo "Starting Bot...."
+echo "Starting Bot, Please Wait..."
 python3 bot.py
